@@ -755,6 +755,21 @@ body.light .header {
     min-height: 310px;
 }
 
+.app-card .app-icon {
+    width: 72px;
+    height: 72px;
+
+    margin-top: 22px;
+    margin-bottom: 14px;
+
+    border-radius: 18px;
+}
+
+.app-card h3 {
+    font-size: 18px;
+    line-height: 1.25;
+}
+
 .app-icon {
     width: 52px;
     height: 52px;
