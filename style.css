@@ -3,10 +3,10 @@
 ========================================================= */
 
 :root {
-    --bg: #0b0d12;
-    --bg-secondary: #10131a;
-    --card: #131720;
-    --card-hover: #171b25;
+    --bg: #0b1117;
+    --bg-secondary: #101b21;
+    --card: #142027;
+    --card-hover: #1a2a31;
 
     --text: #f5f7fa;
     --text-secondary: #a5adba;
@@ -14,8 +14,8 @@
 
     --border: rgba(255, 255, 255, 0.09);
 
-    --accent: #8b5cf6;
-    --accent-2: #06b6d4;
+    --accent: #ff8066;
+    --accent-2: #36d1b4;
 
     --max-width: 1120px;
 
@@ -54,15 +54,14 @@ html {
 
 body {
     font-family:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
+        "Avenir Next",
+        "Trebuchet MS",
         sans-serif;
 
-    background: var(--bg);
+    background-color: var(--bg);
+    background-image:
+        radial-gradient(circle at 15% 10%, rgba(255, 128, 102, 0.1), transparent 28rem),
+        radial-gradient(circle at 90% 55%, rgba(54, 209, 180, 0.08), transparent 30rem);
     color: var(--text);
 
     line-height: 1.6;
@@ -113,7 +112,7 @@ img {
 
     z-index: 100;
 
-    background: rgba(11, 13, 18, 0.78);
+    background: rgba(11, 17, 23, 0.78);
 
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -224,7 +223,7 @@ body.light .header {
     background:
         radial-gradient(
             circle,
-            rgba(139, 92, 246, 0.18),
+            rgba(255, 128, 102, 0.15),
             transparent 70%
         );
 
@@ -259,7 +258,7 @@ body.light .header {
 
     line-height: 0.95;
 
-    letter-spacing: -5px;
+    letter-spacing: -3px;
 
     margin-bottom: 24px;
 }
@@ -390,7 +389,22 @@ body.light .header {
     text-align: center;
 
     box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.2);
+        0 30px 80px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(54, 209, 180, 0.08);
+
+    position: relative;
+}
+
+.profile-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 10px;
+
+    border: 1px solid rgba(255, 128, 102, 0.14);
+    border-radius: 18px;
+
+    pointer-events: none;
 }
 
 .profile-image {
@@ -467,7 +481,10 @@ body.light .header {
 }
 
 .section-alt {
-    background: var(--bg-secondary);
+    background:
+        linear-gradient(180deg, rgba(16, 27, 33, 0.76), rgba(11, 17, 23, 0.3));
+
+    border-block: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .section-heading {
@@ -655,6 +672,8 @@ body.light .header {
 
     border-radius: 20px;
 
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+
     transition:
         transform var(--transition),
         background var(--transition),
@@ -667,7 +686,9 @@ body.light .header {
     background: var(--card-hover);
 
     border-color:
-        rgba(139, 92, 246, 0.3);
+        rgba(54, 209, 180, 0.42);
+
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.2);
 }
 
 .project-top {
@@ -743,6 +764,8 @@ body.light .header {
 
     background: var(--bg-secondary);
     border: 1px solid var(--border);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
 .app-icon img {
