@@ -211,7 +211,8 @@ body.light .header {
 }
 
 .nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown:focus-within .nav-dropdown-menu {
+.nav-dropdown:focus-within .nav-dropdown-menu,
+.nav-dropdown.open .nav-dropdown-menu {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
