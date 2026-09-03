@@ -160,6 +160,73 @@ body.light .header {
     color: var(--text);
 }
 
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-toggle {
+    border: 0;
+    padding: 0;
+
+    background: transparent;
+    color: var(--text-secondary);
+
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-dropdown-toggle:hover,
+.nav-dropdown:focus-within .nav-dropdown-toggle {
+    color: var(--text);
+}
+
+.nav-dropdown-toggle span {
+    color: var(--accent-2);
+    font-size: 16px;
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 18px);
+    right: -12px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(190px, 1fr));
+    gap: 2px;
+
+    width: 440px;
+    padding: 10px;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.28);
+
+    transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-dropdown-menu a {
+    padding: 9px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.nav-dropdown-menu a:hover {
+    background: var(--card-hover);
+}
+
 .nav-actions {
     display: flex;
     align-items: center;
@@ -794,6 +861,74 @@ body.light .header {
     object-fit: cover;
 }
 
+.policy-page {
+    padding: 150px 0 100px;
+}
+
+.policy-intro {
+    max-width: 680px;
+    margin-bottom: 48px;
+}
+
+.policy-intro h1 {
+    margin-bottom: 18px;
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.policy-intro > p:not(.section-label):not(.policy-updated),
+.policy-updated,
+.policy-contact {
+    color: var(--text-secondary);
+}
+
+.policy-updated {
+    margin-top: 16px;
+    font-size: 13px;
+}
+
+.policy-list {
+    display: grid;
+    gap: 14px;
+    max-width: 860px;
+}
+
+.policy-card {
+    padding: 28px 30px;
+    scroll-margin-top: 100px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.policy-card:target {
+    border-color: var(--accent-2);
+    box-shadow: 0 0 0 3px rgba(54, 209, 180, 0.12);
+}
+
+.policy-card h2 {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.policy-card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.policy-contact {
+    margin-top: 38px;
+}
+
+.policy-contact a {
+    color: var(--accent-2);
+}
+
+.policy-back {
+    min-height: 40px;
+}
+
 .tags {
     display: flex;
 
@@ -1015,6 +1150,35 @@ body.light .header {
 
     .nav-links a {
         padding: 12px;
+    }
+
+    .nav-dropdown {
+        padding: 0 12px;
+    }
+
+    .nav-dropdown-toggle {
+        width: 100%;
+        padding: 12px 0;
+        text-align: left;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        display: none;
+        grid-template-columns: 1fr;
+        width: auto;
+        padding: 0 0 8px 12px;
+
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .nav-dropdown.open .nav-dropdown-menu {
+        display: grid;
     }
 
     .menu-btn {

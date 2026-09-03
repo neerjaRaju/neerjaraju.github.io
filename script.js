@@ -4,6 +4,8 @@
 
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
+const privacyDropdown = document.querySelector(".nav-dropdown");
+const privacyToggle = document.querySelector(".nav-dropdown-toggle");
 
 menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
@@ -12,6 +14,11 @@ menuToggle.addEventListener("click", () => {
         navLinks.classList.contains("active")
             ? "✕"
             : "☰";
+});
+
+privacyToggle?.addEventListener("click", () => {
+    const isOpen = privacyDropdown.classList.toggle("open");
+    privacyToggle.setAttribute("aria-expanded", isOpen);
 });
 
 
