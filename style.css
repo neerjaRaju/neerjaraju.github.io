@@ -738,18 +738,18 @@ body.light .header {
     width: 52px;
     height: 52px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     border-radius: 14px;
+    overflow: hidden;
 
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    color: white;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+}
 
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 0;
+.app-icon img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
 }
 
 .tags {
