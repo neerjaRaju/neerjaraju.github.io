@@ -406,6 +406,10 @@ body.light .site-header {
 .section {
   padding: 110px 0;
 }
+
+main section[id] {
+  scroll-margin-top: 92px;
+}
 .section-tint {
   background: linear-gradient(
     180deg,
@@ -646,13 +650,15 @@ body.light .site-header {
   border: 1px solid var(--border);
   border-radius: 18px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
 }
 
 .office-card-image {
   width: calc(100% + 40px);
-  height: 132px;
+  height: 156px;
   margin: -22px -20px 20px;
-  object-fit: cover;
+  padding: 18px;
+  object-fit: contain;
   border-bottom: 1px solid var(--border);
   background: #111827;
 }
