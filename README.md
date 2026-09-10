@@ -1,4 +1,4 @@
-# Neerja Raju - Developer Portfolio
+# Rajendra Kumar Kumawat - Developer Portfolio
 
 Personal developer portfolio and GitHub showcase for Android, Flutter, C++, AI and computer vision work.
 
